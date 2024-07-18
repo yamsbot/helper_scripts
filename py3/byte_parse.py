@@ -14,10 +14,10 @@ reg = "\033[00m"
 
 # MAIN
 if __name__ == "__main__":
-    if sys.argv[1] == "":
+    if len(sys.argv) < 2:
         sys.exit()
 
-    if sys.argv[2] != "":
+    if len(sys.argv) == 3:
         bad_char = True
 
     with open(sys.argv[1], "rb") as f:
